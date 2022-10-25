@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace 비어있으면 error가 난다-->
+<mapper namespace="Book">
+<insert id="save" parameterType="Book">
+    insert into book_table(bookName, bookAuthor, bookPrice, bookPublisher) values (#{bookName}, #{bookAuthor}, #{bookPrice}, #{bookPublisher})
+</insert>
+    <select id="findBook" resultType="book">
+        select * from book_table where bookId=2
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
