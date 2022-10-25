@@ -10,6 +10,12 @@
     <select id="findBook" resultType="book">
         select * from book_table where bookId=2
     </select>
+    <select id="findAll" resultType="book">
+        select * from book_table
+    </select>
+    <select id="findById" resultType="book" parameterType="Long">
+        select * from book_table where bookId=#{bookId}
+    </select>
 </mapper>
 
 
